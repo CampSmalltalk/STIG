@@ -1,0 +1,3 @@
+decodeImportsString: aString
+
+	^aString withCRs

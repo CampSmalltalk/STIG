@@ -1,0 +1,3 @@
+addSharedVariableBlueprint: aSharedVariableBlueprint
+
+	sharedVariableBlueprints addLast: aSharedVariableBlueprint

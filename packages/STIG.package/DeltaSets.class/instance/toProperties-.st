@@ -1,0 +1,3 @@
+toProperties: anObject
+
+	toProperties := anObject

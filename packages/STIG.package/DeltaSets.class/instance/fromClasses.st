@@ -1,0 +1,3 @@
+fromClasses
+
+	^fromClasses

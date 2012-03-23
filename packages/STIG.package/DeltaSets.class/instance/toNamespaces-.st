@@ -1,0 +1,3 @@
+toNamespaces: anObject
+
+	toNamespaces := anObject

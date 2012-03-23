@@ -1,0 +1,3 @@
+classInstanceVariablesString
+
+	^self instanceVariablesString: classInstanceVariables

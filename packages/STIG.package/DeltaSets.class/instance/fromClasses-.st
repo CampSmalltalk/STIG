@@ -1,0 +1,3 @@
+fromClasses: anObject
+
+	fromClasses := anObject

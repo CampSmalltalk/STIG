@@ -1,0 +1,3 @@
+sharedVariableBlueprints
+
+	^sharedVariableBlueprints

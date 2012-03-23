@@ -1,0 +1,3 @@
+parent: anObject
+
+	parent := anObject

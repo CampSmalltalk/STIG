@@ -1,0 +1,8 @@
+{	"category" : "'constants'",
+	"initializer" : "'| map |
+	map := WordArray withAll: (0 to: 255).
+	map at: 13 + 1 put: 10.
+	map at: 10 + 1 put: 13.
+	16r80 to: 255 do: [:n | map at: n + 1 put: 255].
+	map'"
+}

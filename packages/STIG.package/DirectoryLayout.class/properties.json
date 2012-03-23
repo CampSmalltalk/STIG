@@ -1,0 +1,3 @@
+{	"instvars:" : "#('root' 'directoryCache')",
+	"super:" : "#{Core.Object}"
+}

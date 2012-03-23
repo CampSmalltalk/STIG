@@ -1,0 +1,3 @@
+{	"instvars:" : "#('directory' 'parent')",
+	"super:" : "#{Core.Object}"
+}

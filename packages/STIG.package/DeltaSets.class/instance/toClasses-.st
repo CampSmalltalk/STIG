@@ -1,0 +1,3 @@
+toClasses: anObject
+
+	toClasses := anObject

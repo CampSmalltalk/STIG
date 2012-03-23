@@ -1,0 +1,3 @@
+toShares: anObject
+
+	toShares := anObject

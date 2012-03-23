@@ -1,0 +1,3 @@
+fromShares: anObject
+
+	fromShares := anObject

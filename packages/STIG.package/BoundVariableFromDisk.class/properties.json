@@ -1,0 +1,3 @@
+{	"instvars:" : "#('name' 'reference')",
+	"super:" : "#{STIG.AbstractFromDisk}"
+}

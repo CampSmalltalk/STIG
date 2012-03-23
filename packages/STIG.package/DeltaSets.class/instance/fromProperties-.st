@@ -1,0 +1,3 @@
+fromProperties: anObject
+
+	fromProperties := anObject

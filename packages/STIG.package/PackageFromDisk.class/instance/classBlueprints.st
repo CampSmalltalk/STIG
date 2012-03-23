@@ -1,0 +1,3 @@
+classBlueprints
+
+	^classBlueprints

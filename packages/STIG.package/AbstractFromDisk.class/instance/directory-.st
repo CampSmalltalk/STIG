@@ -1,0 +1,3 @@
+directory: anObject
+
+	directory := anObject

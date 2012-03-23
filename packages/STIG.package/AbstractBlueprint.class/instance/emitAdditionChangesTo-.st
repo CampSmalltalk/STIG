@@ -1,0 +1,3 @@
+emitAdditionChangesTo: aCompositeChange
+
+	^self subclassResponsibility

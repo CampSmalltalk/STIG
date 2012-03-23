@@ -1,0 +1,3 @@
+refersToSameObject: aBlueprint
+
+	^self subclassResponsibility

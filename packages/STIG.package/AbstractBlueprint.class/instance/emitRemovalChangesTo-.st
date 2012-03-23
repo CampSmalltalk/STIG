@@ -1,0 +1,3 @@
+emitRemovalChangesTo: aCompositeChange
+
+	^self subclassResponsibility

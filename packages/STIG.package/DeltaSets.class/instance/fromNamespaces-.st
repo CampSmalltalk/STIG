@@ -1,0 +1,3 @@
+fromNamespaces: anObject
+
+	fromNamespaces := anObject

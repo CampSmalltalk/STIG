@@ -1,0 +1,3 @@
+addNamespaceBlueprint: aNamespaceBlueprint
+
+	namespaceBlueprints addLast: aNamespaceBlueprint

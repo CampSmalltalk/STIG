@@ -1,0 +1,3 @@
+toMethods: anObject
+
+	toMethods := anObject

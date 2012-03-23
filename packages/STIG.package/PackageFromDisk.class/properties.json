@@ -1,0 +1,3 @@
+{	"instvars:" : "#('packageName' 'propertyBlueprints' 'namespaceBlueprints' 'classBlueprints' 'sharedVariableBlueprints' 'methodBlueprints')",
+	"super:" : "#{STIG.AbstractFromDisk}"
+}

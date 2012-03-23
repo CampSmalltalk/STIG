@@ -1,0 +1,3 @@
+livePackage
+
+	^self subclassResponsibility

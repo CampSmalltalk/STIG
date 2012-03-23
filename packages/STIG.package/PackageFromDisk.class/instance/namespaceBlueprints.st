@@ -1,0 +1,3 @@
+namespaceBlueprints
+
+	^namespaceBlueprints

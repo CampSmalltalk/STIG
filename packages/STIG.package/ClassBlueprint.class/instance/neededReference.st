@@ -1,0 +1,3 @@
+neededReference
+
+	^superclassReference

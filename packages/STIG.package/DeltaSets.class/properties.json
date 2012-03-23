@@ -1,0 +1,3 @@
+{	"instvars:" : "#('fromClasses' 'fromMethods' 'fromShares' 'fromProperties' 'fromNamespaces' 'toClasses' 'toMethods' 'toNamespaces' 'toShares' 'toProperties' 'removals' 'additions' 'changes' 'originals')",
+	"super:" : "#{Core.Object}"
+}

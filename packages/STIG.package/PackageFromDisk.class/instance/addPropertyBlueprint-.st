@@ -1,0 +1,3 @@
+addPropertyBlueprint: aPropertyBlueprint
+
+	propertyBlueprints addLast: aPropertyBlueprint
