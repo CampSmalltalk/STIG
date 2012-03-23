@@ -3,3 +3,6 @@ The following comment was copied from the original comments of STIG.TravisLayout
 
 ==========================================================
 
+Class Instance Variables
+	specials	<Dictionary> maps binary selector characters to labels
+

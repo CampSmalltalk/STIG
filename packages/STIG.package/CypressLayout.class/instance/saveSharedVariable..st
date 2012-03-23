@@ -1,7 +1,7 @@
 saveSharedVariable: aSharedVariableBlueprint
 
 	| path properties |
-	path := Array with: aSharedVariableBlueprint packageName with: aSharedVariableBlueprint reference environment name, '.pool'.
+	path := Array with: aSharedVariableBlueprint packageName, '.package' with: aSharedVariableBlueprint reference environment name, '.pool'.
 	properties := Dictionary new.
 	properties at: #category put: aSharedVariableBlueprint category.
 	aSharedVariableBlueprint isConstant ifTrue: [ properties at: 'constant:' put: aSharedVariableBlueprint isConstant ].

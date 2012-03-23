@@ -6,5 +6,5 @@ selfRead
 	| fromDisk |
 	fromDisk := PackageFromDisk
 				forPackage: (Store.Registry packageNamed: 'STIG').
-	fromDisk read: DefaultLayout new.
+	fromDisk read: (DefaultLayout root: 'STIG').
 	^fromDisk

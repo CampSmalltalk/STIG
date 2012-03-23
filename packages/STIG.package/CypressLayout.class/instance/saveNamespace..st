@@ -1,7 +1,7 @@
 saveNamespace: aNamespaceBlueprint
 
 	| path properties |
-	path := Array with: aNamespaceBlueprint packageName with: aNamespaceBlueprint reference name, '.pool'.
+	path := Array with: aNamespaceBlueprint packageName, '.package' with: aNamespaceBlueprint reference name, '.pool'.
 	aNamespaceBlueprint comment size = 0 ifFalse: [
 		self path: path tail: 'README' write: [ :ws | ws nextPutAll: aNamespaceBlueprint comment ] ].
 	properties := Dictionary new.

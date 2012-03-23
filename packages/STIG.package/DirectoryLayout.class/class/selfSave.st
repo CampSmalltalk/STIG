@@ -10,5 +10,5 @@ selfSave
 		addAll: package namespaceBlueprints;
 		addAll: package sharedVariableBlueprints;
 		addAll: package methodBlueprints.
-	toDisk := DefaultLayout new.
+	toDisk := DefaultLayout root: 'STIG'.
 	toDisk saveAll: blueprints
