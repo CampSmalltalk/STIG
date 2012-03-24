@@ -1,19 +1,25 @@
-saveClass: aClassBlueprint
+saveClass: blueprint
 
 	| path name properties |
-	name := aClassBlueprint reference name.
-	path := (Array with: aClassBlueprint packageName, '.package' with: name, '.class').
-	aClassBlueprint comment size = 0 ifFalse: [
+	name := blueprint reference name.
+	path := (Array with: blueprint packageName, '.package' with: name, '.class').
+	blueprint comment size = 0 ifFalse: [
 		self path: path tail: 'README' write: [ :ws |
 			ws nextPutAll: 'comment:'.
 			ws cr.
-			ws nextPutAll: aClassBlueprint comment] ].
+			ws nextPutAll: blueprint comment] ].
 	properties := Dictionary new.
-	aClassBlueprint superclassReference ifNotNil: [ properties at: 'super:' put: aClassBlueprint superclassReference ].
-	aClassBlueprint behaviorType == #none ifFalse: [ properties at: 'type:' put: aClassBlueprint behaviorType ].
-	aClassBlueprint instanceVariables isEmpty ifFalse: [ properties at: 'instvars:' put: aClassBlueprint instanceVariables ].
-	aClassBlueprint classInstanceVariables isEmpty ifFalse: [ properties at: 'classinstvars:' put: aClassBlueprint classInstanceVariables ].
-	aClassBlueprint importsString isEmpty ifFalse: [ properties at: 'imports:' put: (self encodeImportsString: aClassBlueprint) ].
-	aClassBlueprint isPrivate ifTrue: [ properties at: 'private:' put: aClassBlueprint isPrivate ].
-	aClassBlueprint attributes isEmpty ifFalse: [ properties at: 'attributes:' put: aClassBlueprint attributes ].
-	self path: path tail: 'properties.json' writeJson: properties
+	properties at: 'name' put: blueprint reference name.
+	blueprint reference environment == Smalltalk ifFalse: [
+		properties at: 'namespace' put: blueprint reference environment fullName ].
+	blueprint superclassReference ifNotNil: [ | ns |
+		properties at: 'super' put: blueprint superclassReference name.
+		(ns := blueprint superclassReference environment) == Smalltalk ifFalse: [
+			properties at: 'superNamespace:' put: ns fullName ] ].
+	blueprint behaviorType == #none ifFalse: [ properties at: 'type' put: blueprint behaviorType ].
+	blueprint instanceVariables isEmpty ifFalse: [ properties at: 'instvars' put: blueprint instanceVariables ].
+	blueprint classInstanceVariables isEmpty ifFalse: [ properties at: 'classinstvars' put: blueprint classInstanceVariables ].
+	blueprint importsString isEmpty ifFalse: [ properties at: 'imports' put: (self encodeImportsString: blueprint) ].
+	blueprint isPrivate ifTrue: [ properties at: 'private' put: blueprint isPrivate ].
+	blueprint attributes isEmpty ifFalse: [ properties at: 'attributes' put: blueprint attributes ].
+	self path: path tail: 'properties.json' write: [ :ws | properties jsonWriteOn: ws ]

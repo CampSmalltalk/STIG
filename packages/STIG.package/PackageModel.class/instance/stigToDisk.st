@@ -1,15 +1,14 @@
 stigToDisk
 
-	| fromDisk deltas toDisk |
-	fromDisk := PackageFromDisk forPackage: self.
+	| fromDisk deltas layout |
+	layout := DirectoryLayout root: self stigRoot.
+	fromDisk := layout packageFromDisk: self name.
 	fromDisk directory ensureDirectory.
-	"eventually get the layout from the disk if it's there"
-	toDisk := DefaultLayout root: self stigRoot.
-	fromDisk read: toDisk.
+	fromDisk read: layout.
 	deltas := DeltaSets from: fromDisk to: self.
-	deltas hasPackagePropertyChanges ifTrue: [ toDisk savePackage: self ].
-	toDisk
+	deltas hasPackagePropertyChanges ifTrue: [ layout savePackage: self ].
+	layout
 		saveAll: deltas additions;
 		saveAll: deltas changes.
 	deltas removals do: [:each | each original delete].
-	toDisk cleanDirectory: fromDisk directory
+	layout cleanDirectory: fromDisk directory

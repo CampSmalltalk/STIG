@@ -1,2 +1,4 @@
-{	"super:" : "#{STIG.AbstractFromDisk}"
-}
+{	"name" : "PropertiesFromDisk",
+	"namespace" : "STIG",
+	"super" : "AbstractFromDisk",
+	"superNamespace:" : "STIG" }

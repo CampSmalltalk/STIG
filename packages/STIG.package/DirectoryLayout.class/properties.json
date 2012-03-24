@@ -1,3 +1,6 @@
-{	"instvars:" : "#('root' 'directoryCache')",
-	"super:" : "#{Core.Object}"
-}
+{	"instvars" : [	"root",
+		"directoryCache" ],
+	"name" : "DirectoryLayout",
+	"namespace" : "STIG",
+	"super" : "Object",
+	"superNamespace:" : "Core" }

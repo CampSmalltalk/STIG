@@ -1,3 +1,18 @@
-{	"instvars:" : "#('fromClasses' 'fromMethods' 'fromShares' 'fromProperties' 'fromNamespaces' 'toClasses' 'toMethods' 'toNamespaces' 'toShares' 'toProperties' 'removals' 'additions' 'changes' 'originals')",
-	"super:" : "#{Core.Object}"
-}
+{	"instvars" : [	"fromClasses",
+		"fromMethods",
+		"fromShares",
+		"fromProperties",
+		"fromNamespaces",
+		"toClasses",
+		"toMethods",
+		"toNamespaces",
+		"toShares",
+		"toProperties",
+		"removals",
+		"additions",
+		"changes",
+		"originals" ],
+	"name" : "DeltaSets",
+	"namespace" : "Tools",
+	"super" : "Object",
+	"superNamespace:" : "Core" }

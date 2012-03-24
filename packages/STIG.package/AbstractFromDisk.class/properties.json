@@ -1,3 +1,6 @@
-{	"instvars:" : "#('directory' 'parent')",
-	"super:" : "#{Core.Object}"
-}
+{	"instvars" : [	"directory",
+		"parent" ],
+	"name" : "AbstractFromDisk",
+	"namespace" : "STIG",
+	"super" : "Object",
+	"superNamespace:" : "Core" }

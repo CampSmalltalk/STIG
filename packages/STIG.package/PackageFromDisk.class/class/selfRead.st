@@ -3,8 +3,8 @@ selfRead
 	[read := self selfRead] timeToRun out.
 	read blueprints"
 
-	| fromDisk |
-	fromDisk := PackageFromDisk
-				forPackage: (Store.Registry packageNamed: 'STIG').
-	fromDisk read: (DefaultLayout root: 'STIG').
+	| fromDisk layout |
+	layout := DirectoryLayout root: 'STIG'.
+	fromDisk := layout packageFromDisk: 'STIG'.
+	fromDisk read: layout.
 	^fromDisk

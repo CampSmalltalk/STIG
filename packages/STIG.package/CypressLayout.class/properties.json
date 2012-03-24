@@ -1,3 +1,5 @@
-{	"classinstvars:" : "#('specials')",
-	"super:" : "#{STIG.DirectoryLayout}"
-}
+{	"classinstvars" : [	"specials" ],
+	"name" : "CypressLayout",
+	"namespace" : "STIG",
+	"super" : "DirectoryLayout",
+	"superNamespace:" : "STIG" }

@@ -1,3 +1,5 @@
 stigFromDisk
 
-	self stigFromDisk: ((PackageFromDisk forPackage: self) read: (DefaultLayout root: self stigRoot))
+	| layout |
+	layout := DirectoryLayout root: self stigRoot.
+	self stigFromDisk: ((layout packageFromDisk: self name) read: layout)

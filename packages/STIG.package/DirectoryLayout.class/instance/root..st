@@ -1,3 +1,3 @@
 root: anObject
 
-	root := anObject asFilename / 'packages'
+	root := anObject asFilename

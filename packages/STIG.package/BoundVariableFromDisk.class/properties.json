@@ -1,3 +1,6 @@
-{	"instvars:" : "#('name' 'reference')",
-	"super:" : "#{STIG.AbstractFromDisk}"
-}
+{	"instvars" : [	"name",
+		"reference" ],
+	"name" : "BoundVariableFromDisk",
+	"namespace" : "STIG",
+	"super" : "AbstractFromDisk",
+	"superNamespace:" : "STIG" }

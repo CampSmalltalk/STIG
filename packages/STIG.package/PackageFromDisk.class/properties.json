@@ -1,3 +1,10 @@
-{	"instvars:" : "#('packageName' 'propertyBlueprints' 'namespaceBlueprints' 'classBlueprints' 'sharedVariableBlueprints' 'methodBlueprints')",
-	"super:" : "#{STIG.AbstractFromDisk}"
-}
+{	"instvars" : [	"packageName",
+		"propertyBlueprints",
+		"namespaceBlueprints",
+		"classBlueprints",
+		"sharedVariableBlueprints",
+		"methodBlueprints" ],
+	"name" : "PackageFromDisk",
+	"namespace" : "STIG",
+	"super" : "AbstractFromDisk",
+	"superNamespace:" : "STIG" }

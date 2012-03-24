@@ -1,3 +1,2 @@
-{	"category" : "'constants'",
-	"initializer" : "'''STIGRoot'''"
-}
+{	"category" : "constants",
+	"initializer" : "'STIGRoot'" }
