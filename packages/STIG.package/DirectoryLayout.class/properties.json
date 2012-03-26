@@ -2,5 +2,4 @@
 		"directoryCache" ],
 	"name" : "DirectoryLayout",
 	"namespace" : "STIG",
-	"super" : "Object",
-	"superNamespace:" : "Core" }
+	"super" : "Object" }

@@ -2,5 +2,4 @@
 		"parent" ],
 	"name" : "AbstractFromDisk",
 	"namespace" : "STIG",
-	"super" : "Object",
-	"superNamespace:" : "Core" }
+	"super" : "Object" }

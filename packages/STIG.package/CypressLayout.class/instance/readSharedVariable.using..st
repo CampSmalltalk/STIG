@@ -1,26 +1,13 @@
 readSharedVariable: aFilename using: fromDisk
 
-	| rs lookup dispatch blueprint |
+	| blueprint properties |
+	properties := JSON read: (fromDisk fileContents: aFilename) readStream.
 	blueprint := SharedVariableBlueprint new.
 	blueprint original: aFilename.
-	blueprint reference: fromDisk reference.
-	rs := (fromDisk fileContents: aFilename) readStream.
-	blueprint category: (rs upTo: Character cr).
-	blueprint isPrivate: false.
-	blueprint isConstant: false.
-	lookup := #('private:' 'constant:').
-	dispatch := #(#load:isPrivate: #load:isConstant:).
-	[rs atEnd] whileFalse: 
-			[| line |
-			line := rs upTo: Character cr.
-			line = 'init:'
-				ifTrue: [blueprint initializer: rs upToEnd]
-				ifFalse: 
-					[| index |
-					index := lookup findFirst: [:each | line beginsWith: each].
-					fromDisk
-						perform: (dispatch at: index)
-						with: blueprint
-						with: (line allButFirst: (lookup at: index) size)]].
+	blueprint reference: (self referenceFrom: properties super: false).
+	blueprint category: (properties at: 'category' ifAbsent: [ nil ]).
+	blueprint isPrivate: (properties at: 'private' ifAbsent: [ false ]).
+	blueprint isConstant: (properties at: 'constant' ifAbsent: [ false ]).
+	blueprint initializer: (properties at: 'initializer' ifAbsent: [ nil ]).
 	fromDisk addBlueprint: blueprint.
 	^fromDisk

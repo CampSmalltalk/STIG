@@ -22,7 +22,7 @@ readClass: aFilename using: fromDisk
 				ifFalse: 
 					[| index |
 					index := lookup findFirst: [:each | line beginsWith: each].
-					fromDisk
+					self
 						perform: (dispatch at: index)
 						with: blueprint
 						with: (line allButFirst: (lookup at: index) size)]].

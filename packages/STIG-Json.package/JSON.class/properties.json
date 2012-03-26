@@ -2,5 +2,4 @@
 		"char" ],
 	"name" : "JSON",
 	"super" : "Object",
-	"superNamespace:" : "Core",
 	"type" : "objects" }

@@ -9,7 +9,7 @@ readMethod: aFilename tail: aTail using: fromDisk
 				ifTrue: [blueprint isInstanceBehavior: false]
 				ifFalse: [blueprint isInstanceBehavior: true]].
 	blueprint classReference: fromDisk reference.
-	blueprint selector: (fromDisk decodeSelector: (aTail allButFirst: 1)) asSymbol.
+	blueprint selector: (self decodeSelector: (aTail allButFirst: 1)) asSymbol.
 	rs := (fromDisk fileContents: aFilename) readStream.
 	blueprint category: (rs upTo: Character cr).
 	blueprint source: rs upToEnd.

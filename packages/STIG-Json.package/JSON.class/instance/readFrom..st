@@ -1,4 +1,4 @@
 readFrom: source
 
 	stream := source.
-	self parse
+	^self parse

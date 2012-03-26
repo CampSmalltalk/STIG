@@ -1,3 +1,5 @@
 skipWhitespace
 
-	[ Whitespace includes: (char := self get) ] whileTrue
+	| c |
+	[ Whitespace includes: (c := self get) ] whileTrue.
+	char := c

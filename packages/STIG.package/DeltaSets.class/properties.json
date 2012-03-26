@@ -14,5 +14,4 @@
 		"originals" ],
 	"name" : "DeltaSets",
 	"namespace" : "Tools",
-	"super" : "Object",
-	"superNamespace:" : "Core" }
+	"super" : "Object" }

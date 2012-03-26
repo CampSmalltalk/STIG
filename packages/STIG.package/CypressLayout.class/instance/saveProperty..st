@@ -5,5 +5,5 @@ saveProperty: aPropertyBlueprint
 	path := Array with: aPropertyBlueprint codeComponentName.
 	self
 		path: path
-		tail: 'README'
+		tail: CommentFile
 		write: [:ws | ws nextPutAll: aPropertyBlueprint value]

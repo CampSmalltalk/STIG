@@ -1,30 +1,17 @@
 readClass: aFilename using: fromDisk
 
-	| rs lookup dispatch blueprint |
+	| blueprint properties file |
+	properties := JSON read: (fromDisk fileContents: aFilename) readStream.
 	blueprint := ClassBlueprint new.
 	blueprint original: aFilename.
-	blueprint reference: fromDisk reference.
-	blueprint importsString: ''.
-	blueprint isPrivate: false.
-	blueprint instanceVariables: Array new.
-	blueprint classInstanceVariables: Array new.
-	blueprint attributes: Array new.
-	blueprint behaviorType: #none.
-	blueprint comment: ''.
-	rs := (fromDisk fileContents: aFilename) readStream.
-	lookup := #('super:' 'instvars:' 'import:' 'type:' 'classvars:' 'private:' 'attributes:').
-	dispatch := #(#load:superclassReference: #load:instanceVariables: #load:importsString: #load:behaviorType: #load:classInstanceVariables: #load:isPrivate: #load:attributes:).
-	[rs atEnd] whileFalse: 
-			[| line |
-			line := rs upTo: Character cr.
-			line = 'comment:'
-				ifTrue: [blueprint comment: rs upToEnd]
-				ifFalse: 
-					[| index |
-					index := lookup findFirst: [:each | line beginsWith: each].
-					fromDisk
-						perform: (dispatch at: index)
-						with: blueprint
-						with: (line allButFirst: (lookup at: index) size)]].
-	fromDisk addBlueprint: blueprint.
+	blueprint reference: (self referenceFrom: properties super: false).
+	blueprint importsString: (self decodeImportsString: (properties at: 'imports' ifAbsent: [''])).
+	blueprint isPrivate: (properties at: 'private' ifAbsent: [ false ]).
+	blueprint instanceVariables: (properties at: 'instvars' ifAbsent: [Array new]).
+	blueprint classInstanceVariables: (properties at: 'classinstvars' ifAbsent: [Array new]).
+	blueprint attributes: (properties at: 'attributes' ifAbsent: [ Array new ]).
+	blueprint behaviorType: (properties at: 'type' ifAbsent: [ #none ]).
+	blueprint comment: ((file := aFilename directory / CommentFile) exists ifTrue: [fromDisk fileContents: file] ifFalse: ['']).
+	blueprint superclassReference: (self referenceFrom: properties super: true).
+	fromDisk reference: blueprint reference; addBlueprint: blueprint.
 	^fromDisk
