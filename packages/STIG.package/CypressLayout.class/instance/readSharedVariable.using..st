@@ -1,10 +1,13 @@
 readSharedVariable: aFilename using: fromDisk
 
-	| blueprint properties |
+	| blueprint properties reference |
 	properties := JSON read: (fromDisk fileContents: aFilename) readStream.
+	reference := ((properties at: 'namespace' ifAbsent: [nil]) ifNil: [''] ifNotNil: [ :ns | ns, '.' ]), (properties at: 'name').
+	reference := reference asQualifiedReference makeUnambiguous.
+	fromDisk reference: reference.
 	blueprint := SharedVariableBlueprint new.
 	blueprint original: aFilename.
-	blueprint reference: (self referenceFrom: properties super: false).
+	blueprint reference: reference.
 	blueprint category: (properties at: 'category' ifAbsent: [ nil ]).
 	blueprint isPrivate: (properties at: 'private' ifAbsent: [ false ]).
 	blueprint isConstant: (properties at: 'constant' ifAbsent: [ false ]).

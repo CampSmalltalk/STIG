@@ -1,2 +1,4 @@
 {	"category" : "constants",
-	"initializer" : "'STIGRoot'" }
+	"initializer" : "'STIGRoot'",
+	"name" : "DefaultRoot",
+	"namespace" : "STIG" }

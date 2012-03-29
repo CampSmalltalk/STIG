@@ -1,4 +1,6 @@
 {	"classinstvars" : [	"specials" ],
+	"instvars" : [	"classPaths",
+		"definedClasses" ],
 	"name" : "CypressLayout",
 	"namespace" : "STIG",
 	"super" : "DirectoryLayout",

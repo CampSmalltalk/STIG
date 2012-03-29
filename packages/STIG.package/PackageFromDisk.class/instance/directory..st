@@ -1,4 +1,3 @@
 directory: anObject
 
-	directory := anObject asFilename.
-	packageName := directory tail
+	directory := anObject asFilename

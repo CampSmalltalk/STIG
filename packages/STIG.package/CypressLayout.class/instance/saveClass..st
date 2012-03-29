@@ -4,14 +4,11 @@ saveClass: blueprint
 	name := blueprint reference name.
 	path := (Array with: blueprint packageName, '.package' with: name, '.class').
 	blueprint comment size = 0 ifFalse: [
-		self path: path tail: CommentFile write: [ :ws |
-			ws nextPutAll: 'comment:'.
-			ws cr.
-			ws nextPutAll: blueprint comment] ].
+		self path: path tail: CommentFile write: [ :ws | ws nextPutAll: blueprint comment] ].
 	properties := Dictionary new.
-	properties at: 'name' put: blueprint reference name.
+	properties at: 'name' put: name.
 	(IgnoredNamespaces includes: (ns := blueprint reference environment)) ifFalse: [
-		properties at: 'namespace' put: blueprint reference environment fullName ].
+		properties at: 'namespace' put: ns fullName ].
 	blueprint superclassReference ifNotNil: [
 		properties at: 'super' put: blueprint superclassReference name.
 		(IgnoredNamespaces includes: (ns := blueprint superclassReference environment)) ifFalse: [

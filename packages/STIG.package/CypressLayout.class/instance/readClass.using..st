@@ -1,10 +1,14 @@
 readClass: aFilename using: fromDisk
 
-	| blueprint properties file |
+	| blueprint properties file superref reference |
 	properties := JSON read: (fromDisk fileContents: aFilename) readStream.
+	reference := ((properties at: 'namespace' ifAbsent: [nil]) ifNil: [''] ifNotNil: [ :ns | ns, '.' ]), (properties at: 'name').
+	reference := reference asQualifiedReference makeUnambiguous.
+	fromDisk reference: reference.
+	(fromDisk name endsWith: '.extension') ifTrue: [^self].
 	blueprint := ClassBlueprint new.
 	blueprint original: aFilename.
-	blueprint reference: (self referenceFrom: properties super: false).
+	blueprint reference: reference.
 	blueprint importsString: (self decodeImportsString: (properties at: 'imports' ifAbsent: [''])).
 	blueprint isPrivate: (properties at: 'private' ifAbsent: [ false ]).
 	blueprint instanceVariables: (properties at: 'instvars' ifAbsent: [Array new]).
@@ -12,6 +16,8 @@ readClass: aFilename using: fromDisk
 	blueprint attributes: (properties at: 'attributes' ifAbsent: [ Array new ]).
 	blueprint behaviorType: (properties at: 'type' ifAbsent: [ #none ]).
 	blueprint comment: ((file := aFilename directory / CommentFile) exists ifTrue: [fromDisk fileContents: file] ifFalse: ['']).
-	blueprint superclassReference: (self referenceFrom: properties super: true).
-	fromDisk reference: blueprint reference; addBlueprint: blueprint.
+	superref := ((properties at: 'superNamespace' ifAbsent: [nil]) ifNil: [''] ifNotNil: [ :ns | ns, '.' ]), (properties at: 'super').
+	blueprint superclassReference: superref asQualifiedReference makeUnambiguous.
+	blueprint comment: ((file := aFilename directory / CommentFile) exists ifTrue: [fromDisk fileContents: file] ifFalse: ['']).
+	fromDisk addBlueprint: blueprint.
 	^fromDisk

@@ -1,2 +1,4 @@
 {	"category" : "constants",
-	"initializer" : "'properties.json'" }
+	"initializer" : "'properties.json'",
+	"name" : "PropertyFile",
+	"namespace" : "STIG.CypressLayout" }

@@ -1,3 +1,5 @@
 {	"category" : "constants",
 	"constant" : true,
-	"initializer" : "String with: Character tab with: Character space with: Character cr" }
+	"initializer" : "String with: Character tab with: Character space with: Character cr",
+	"name" : "Whitespace",
+	"namespace" : "JSON" }

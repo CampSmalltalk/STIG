@@ -1,3 +1,3 @@
-reference: ref
+reference: aBindingReference
 
-	reference := ref
+	reference := aBindingReference

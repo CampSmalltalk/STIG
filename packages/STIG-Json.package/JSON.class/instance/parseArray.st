@@ -1,10 +1,13 @@
 parseArray
 
-	| array c |
+	| array |
 	self get = $[ ifFalse: [ self error: 'Failed parsing array' ].
 	array := Array new writeStream.
-	[	array nextPut: (self skipWhitespace; parse).
-		(c := self skipWhitespace; get) = $,
-	] whileTrue.
-	c = $] ifFalse: [ self error: 'Failed parsing array' ].
+	self skipWhitespace.
+	[	self peek = $]
+	] whileFalse: [
+		array nextPut: self parse.
+		(self skipWhitespace; peek) = $, ifTrue: [
+			self get; skipWhitespace ] ].
+	self get.
 	^array contents
