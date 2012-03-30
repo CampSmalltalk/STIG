@@ -1,0 +1,4 @@
+{	"instvars" : [	"globalArgs" ],
+	"name" : "Git",
+	"namespace" : "STIG",
+	"super" : "Object" }

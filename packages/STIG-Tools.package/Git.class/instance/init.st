@@ -1,0 +1,3 @@
+init
+
+	self run: #('init')

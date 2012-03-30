@@ -1,0 +1,4 @@
+{	"category" : "debugging",
+	"initializer" : "true",
+	"name" : "LogTimes",
+	"namespace" : "STIG.Git" }

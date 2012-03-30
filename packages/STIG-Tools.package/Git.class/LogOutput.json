@@ -1,0 +1,4 @@
+{	"category" : "debugging",
+	"initializer" : "true",
+	"name" : "LogOutput",
+	"namespace" : "STIG.Git" }
