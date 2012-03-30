@@ -5,5 +5,5 @@ buildCompositeChange
 	additions do: [:each | each emitAdditionChangesTo: composite].
 	changes with: originals
 		do: [:eachChange :eachOriginal | eachChange emitModificationChangesTo: composite relativeTo: eachOriginal].
-	removals reverseDo: [:each | composite emitRemovalChangesTo: composite].
+	removals reverseDo: [:each | each emitRemovalChangesTo: composite].
 	^composite

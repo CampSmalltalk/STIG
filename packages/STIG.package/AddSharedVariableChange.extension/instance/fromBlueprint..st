@@ -3,7 +3,7 @@ fromBlueprint: aSharedVariableBlueprint
 	isConstant := aSharedVariableBlueprint isConstant.
 	isPrivate := aSharedVariableBlueprint isPrivate.
 	category := aSharedVariableBlueprint category.
-	initializer := aSharedVariableBlueprint initializers.
+	initializer := aSharedVariableBlueprint initializer.
 	objectName := aSharedVariableBlueprint reference asString.
 	nameSpaceName := aSharedVariableBlueprint reference environmentName.
 	self package: aSharedVariableBlueprint livePackage.
