@@ -1,4 +1,4 @@
-This is a modified version of Travis Griggs' STIG utility for VisualWorks Smalltalk to match the agreed upon structure of a Cypress compatible repository.
+This is a modified version of Travis Griggs' STIG utility for VisualWorks Smalltalk to match the agreed upon structure of a [Cypress](https://github.com/CampSmalltalk/Cypress) compatible repository.
 
 Here's how to get started
 1) clone this repository into your image directory, you should get a STIG subdirectory there
