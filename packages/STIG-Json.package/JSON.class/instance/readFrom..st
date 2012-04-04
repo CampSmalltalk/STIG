@@ -1,3 +1,4 @@
+accessing
 readFrom: source
 
 	stream := source.

@@ -1,3 +1,4 @@
+accessing
 addSharedVariableBlueprint: aSharedVariableBlueprint
 
 	sharedVariableBlueprints addLast: aSharedVariableBlueprint

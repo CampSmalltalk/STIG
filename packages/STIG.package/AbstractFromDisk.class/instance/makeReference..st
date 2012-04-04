@@ -1,3 +1,4 @@
+private
 makeReference: aSequence
 
 	^BindingReference path: ((aSequence beginsWith: #('Root' 'Smalltalk'))

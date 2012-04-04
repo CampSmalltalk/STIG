@@ -1,3 +1,4 @@
+testing
 hasSameComment: aBlueprint
 	"We assume we know its for the same reference"
 

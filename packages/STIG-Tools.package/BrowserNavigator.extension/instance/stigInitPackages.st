@@ -1,3 +1,4 @@
+STIG
 stigInitPackages
 
 	self packages do: 

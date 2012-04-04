@@ -1,3 +1,4 @@
+saving
 saveClass: blueprint
 
 	| path name properties ns |

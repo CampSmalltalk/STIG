@@ -1,3 +1,4 @@
+private
 translateUTF8Bytes: aByteArray
 
 	^(self translateSingleByteUTF8: aByteArray)

@@ -1,3 +1,4 @@
+saving
 saveNamespace: aNamespaceBlueprint
 
 	| path properties name ns |

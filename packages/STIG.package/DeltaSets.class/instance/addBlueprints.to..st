@@ -1,3 +1,4 @@
+private
 addBlueprints: aSequence to: aBlueprintCollection
 
 	aSequence isEmpty ifTrue: [^self].

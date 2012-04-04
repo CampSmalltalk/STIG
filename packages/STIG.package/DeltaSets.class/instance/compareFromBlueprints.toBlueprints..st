@@ -1,3 +1,4 @@
+private
 compareFromBlueprints: fromBlueprints toBlueprints: toBlueprints
 
 	| diffs toStack fromStack localRemoved localChanged localAdded fromAgain toAgain localOriginals |

@@ -1,3 +1,4 @@
+utility
 selfRead
 	"| read |
 	[read := self selfRead] timeToRun out.

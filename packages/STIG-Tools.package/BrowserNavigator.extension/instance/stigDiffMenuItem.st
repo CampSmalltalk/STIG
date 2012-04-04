@@ -1,3 +1,4 @@
+menus
 stigDiffMenuItem
 	<itemInMenu: #(#pundleMenu #stigMenu) position: 10.6>
 

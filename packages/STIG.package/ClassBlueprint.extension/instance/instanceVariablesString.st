@@ -1,3 +1,4 @@
+accessing
 instanceVariablesString
 
 	^self instanceVariablesString: instanceVariables

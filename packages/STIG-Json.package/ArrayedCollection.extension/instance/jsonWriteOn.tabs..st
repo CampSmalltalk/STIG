@@ -1,3 +1,4 @@
+printing
 jsonWriteOn: stream tabs: tabs
 
 	stream nextPut: $[; tab.  

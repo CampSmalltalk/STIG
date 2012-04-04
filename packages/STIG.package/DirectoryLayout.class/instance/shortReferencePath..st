@@ -1,3 +1,4 @@
+private
 shortReferencePath: aBindingReference
 
 	| sequence |

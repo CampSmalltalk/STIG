@@ -1,3 +1,4 @@
+loading
 readMethod: aFilename tail: aTail using: fromDisk
 
 	| blueprint rs |

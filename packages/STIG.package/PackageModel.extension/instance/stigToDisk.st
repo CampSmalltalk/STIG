@@ -1,3 +1,4 @@
+STIG
 stigToDisk
 
 	| fromDisk deltas layout |

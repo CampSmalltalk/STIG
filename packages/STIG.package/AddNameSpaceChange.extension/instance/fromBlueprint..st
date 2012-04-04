@@ -1,3 +1,4 @@
+initialize-release
 fromBlueprint: aNamespaceBlueprint
 
 	imports := self parseImports: aNamespaceBlueprint importsString.

@@ -1,3 +1,4 @@
+utility
 sortForDoingImageUpdates: aCollection
 
 	| result byNeed notYetAdded canBeAdded groupToAdd |

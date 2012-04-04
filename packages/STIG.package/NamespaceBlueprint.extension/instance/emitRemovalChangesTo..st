@@ -1,3 +1,4 @@
+converting
 emitRemovalChangesTo: aCompositeChange
 
 	aCompositeChange addChange: (Refactory.Browser.RemoveNameSpaceChange

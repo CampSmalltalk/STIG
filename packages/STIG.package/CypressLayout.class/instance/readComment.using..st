@@ -1,3 +1,4 @@
+loading
 readComment: aFilename using: fromDisk
 
 	| blueprint |

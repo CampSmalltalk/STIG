@@ -1,3 +1,4 @@
+image-updating
 imagePackage
 
 	^(Store.Registry packageNamed: self packageName)

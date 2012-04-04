@@ -1,3 +1,4 @@
+private
 fileContents: aFile
 
 	| bytes fd size buffer output totalRead |

@@ -1,3 +1,4 @@
+utility
 selfSave
 	"[self selfSave] timeToRun out"
 

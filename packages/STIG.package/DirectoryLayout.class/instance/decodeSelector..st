@@ -1,3 +1,4 @@
+private
 decodeSelector: aString
 
 	^aString last = $.

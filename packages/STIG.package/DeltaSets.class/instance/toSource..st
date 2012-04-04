@@ -1,3 +1,4 @@
+initialize-release
 toSource: aBlueprintProvider
 
 	self toProperties: aBlueprintProvider propertyBlueprints.

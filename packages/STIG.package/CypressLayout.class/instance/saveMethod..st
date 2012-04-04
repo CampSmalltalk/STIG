@@ -1,3 +1,4 @@
+saving
 saveMethod: blueprint
 
 	| path tail reference classDirectory properties |
@@ -14,6 +15,6 @@ saveMethod: blueprint
 				dir ] ].
 	path := classDirectory copyWith: (blueprint isInstanceBehavior ifTrue: ['instance'] ifFalse: ['class']).
 	tail := self encodeSelector: blueprint selector.
-	properties := Dictionary new at: #category put: blueprint category; yourself.
-	self path: path tail: tail, '.json' write: [ :ws | properties jsonWriteOn: ws ].
-	self path: path tail: tail, '.st' write: [:ws | ws nextPutAll: blueprint source]
+	self path: path tail: tail, '.st' write: [:ws |
+		ws	nextPutAll: blueprint category; cr;
+			nextPutAll: blueprint source]

@@ -1,3 +1,4 @@
+comparing
 refersToSameObject: aPropertyBlueprint
 
 	^key = aPropertyBlueprint key and: 

@@ -1,3 +1,4 @@
+private
 load: aBlueprint superclassReference: aString
 
 	aBlueprint

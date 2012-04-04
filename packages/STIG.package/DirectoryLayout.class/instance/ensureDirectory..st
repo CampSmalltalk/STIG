@@ -1,3 +1,4 @@
+private-writing
 ensureDirectory: aDirectorySequence
 
 	^directoryCache at: aDirectorySequence

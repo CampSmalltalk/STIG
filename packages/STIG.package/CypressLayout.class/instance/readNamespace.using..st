@@ -1,3 +1,4 @@
+loading
 readNamespace: aFilename using: fromDisk
 
 	| blueprint properties file reference |

@@ -1,3 +1,4 @@
+commands
 commitAll: aMessage
 
 	self

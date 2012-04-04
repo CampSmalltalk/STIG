@@ -1,3 +1,4 @@
+private-writing
 output: string to: fd
 
 	(self outputSingleByteUTF8: string to: fd)

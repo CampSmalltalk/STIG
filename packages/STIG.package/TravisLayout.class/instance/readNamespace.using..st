@@ -1,3 +1,4 @@
+loading
 readNamespace: aFilename using: fromDisk
 
 	| rs lookup dispatch blueprint |

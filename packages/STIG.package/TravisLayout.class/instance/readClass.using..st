@@ -1,3 +1,4 @@
+loading
 readClass: aFilename using: fromDisk
 
 	| rs lookup dispatch blueprint |

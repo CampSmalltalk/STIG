@@ -1,3 +1,4 @@
+private
 get
 
 	^char ifNil: [ stream next ]

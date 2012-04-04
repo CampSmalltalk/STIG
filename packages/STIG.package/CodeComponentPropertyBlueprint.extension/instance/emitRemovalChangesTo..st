@@ -1,3 +1,4 @@
+converting
 emitRemovalChangesTo: aCompositeChange
 
 	| change |

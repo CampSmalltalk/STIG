@@ -1,3 +1,4 @@
+initialize-release
 setPackage: aPackage
 
 	globalArgs := Array with: '--git-dir='

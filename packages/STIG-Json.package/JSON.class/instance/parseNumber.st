@@ -1,3 +1,4 @@
+private-parsing
 parseNumber
 	
 	| number |

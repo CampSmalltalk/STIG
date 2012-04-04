@@ -1,3 +1,4 @@
+accessing
 cleanDirectory: aDirectory
 
 	| fileList allRemoved |

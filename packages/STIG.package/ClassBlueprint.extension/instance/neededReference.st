@@ -1,3 +1,4 @@
+accessing
 neededReference
 
 	^superclassReference

@@ -1,3 +1,4 @@
+comparing
 refersToSameObject: aMethodBlueprint
 
 	^selector = aMethodBlueprint selector and: 

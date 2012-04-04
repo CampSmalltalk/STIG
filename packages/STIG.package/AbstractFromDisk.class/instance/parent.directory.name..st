@@ -1,3 +1,4 @@
+initialize-release
 parent: aParent directory: aDirectory name: aString
 
 	self

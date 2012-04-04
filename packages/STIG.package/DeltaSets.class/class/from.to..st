@@ -1,3 +1,4 @@
+instance creation
 from: aFromProvider to: aToProvider
 
 	^(self new)

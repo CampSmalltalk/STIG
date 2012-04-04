@@ -1,3 +1,4 @@
+private
 encodeImportsString: aBlueprint
 
 	^aBlueprint importsString

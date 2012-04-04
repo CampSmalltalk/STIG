@@ -1,3 +1,4 @@
+private
 sanitize: aString
 
 	^aString

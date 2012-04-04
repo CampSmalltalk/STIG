@@ -1,3 +1,4 @@
+accessing
 packageName: aString
 
 	self codeComponentName: aString.

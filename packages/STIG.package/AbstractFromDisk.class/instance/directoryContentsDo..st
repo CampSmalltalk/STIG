@@ -1,3 +1,4 @@
+accessing
 directoryContentsDo: aBlock
 
 	directory directoryContents

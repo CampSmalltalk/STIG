@@ -1,3 +1,4 @@
+accessing
 addMethodBlueprint: aMethodBlueprint
 
 	methodBlueprints addLast: aMethodBlueprint

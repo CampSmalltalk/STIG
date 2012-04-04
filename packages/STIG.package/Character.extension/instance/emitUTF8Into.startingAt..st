@@ -1,3 +1,4 @@
+composing
 emitUTF8Into: aByteArray startingAt: anIndex
 
 	| code |

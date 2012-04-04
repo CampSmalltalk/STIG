@@ -1,3 +1,4 @@
+private-writing
 path: aDirectorySequence tail: aFiletail write: aBlock
 
 	| actualFilename stream fd string |

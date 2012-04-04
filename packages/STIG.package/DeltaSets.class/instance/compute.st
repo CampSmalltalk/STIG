@@ -1,3 +1,4 @@
+private
 compute
 
 	additions := OrderedCollection new.

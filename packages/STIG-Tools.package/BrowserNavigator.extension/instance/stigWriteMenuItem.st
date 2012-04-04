@@ -1,3 +1,4 @@
+menus
 stigWriteMenuItem
 	<itemInMenu: #(#pundleMenu #stigMenu) position: 10.1>
 

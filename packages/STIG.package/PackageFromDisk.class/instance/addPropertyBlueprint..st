@@ -1,3 +1,4 @@
+accessing
 addPropertyBlueprint: aPropertyBlueprint
 
 	propertyBlueprints addLast: aPropertyBlueprint

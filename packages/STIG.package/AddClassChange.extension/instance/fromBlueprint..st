@@ -1,3 +1,4 @@
+initialize-release
 fromBlueprint: aClassBlueprint
 
 	imports := self parseImports: aClassBlueprint importsString.

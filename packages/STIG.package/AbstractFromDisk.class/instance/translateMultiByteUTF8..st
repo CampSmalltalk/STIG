@@ -1,3 +1,4 @@
+private
 translateMultiByteUTF8: aByteArray
 
 	| output index size firstByte |

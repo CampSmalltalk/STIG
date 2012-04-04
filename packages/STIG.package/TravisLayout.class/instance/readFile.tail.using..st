@@ -1,3 +1,4 @@
+loading
 readFile: aFilename tail: aTail using: fromDisk
 
 	^aTail first = $0

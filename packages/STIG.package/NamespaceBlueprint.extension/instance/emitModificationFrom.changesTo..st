@@ -1,3 +1,4 @@
+converting
 emitModificationFrom: anOriginalBlueprint changesTo: aCompositeChange
 
 	(anOriginalBlueprint hasSameDefinition: self)

@@ -1,3 +1,4 @@
+loading
 readProperties: aFilename using: fromDisk
 
 	| properties |

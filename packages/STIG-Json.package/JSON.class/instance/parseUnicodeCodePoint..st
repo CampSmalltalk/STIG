@@ -1,3 +1,4 @@
+private-parsing
 parseUnicodeCodePoint: digits
 
 	| hex codePoint |

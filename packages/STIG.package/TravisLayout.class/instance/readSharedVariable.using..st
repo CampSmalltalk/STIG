@@ -1,3 +1,4 @@
+loading
 readSharedVariable: aFilename using: fromDisk
 
 	| rs lookup dispatch blueprint |

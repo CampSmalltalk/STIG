@@ -1,3 +1,4 @@
+menus
 stigSetRootMenuItem
 	<itemInMenu: #(#pundleMenu #stigMenu) position: 90.5>
 

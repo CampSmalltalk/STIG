@@ -1,3 +1,4 @@
+accessing
 addBlueprint: aBlueprint
 
 	aBlueprint packageName: self packageName.

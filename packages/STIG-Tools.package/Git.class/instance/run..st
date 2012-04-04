@@ -1,3 +1,4 @@
+private
 run: anArgumentArray
 
 	| time result process exitCode |

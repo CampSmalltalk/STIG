@@ -1,3 +1,4 @@
+private-parsing
 parseNull
 
 	(self read: 4) = 'null' ifTrue: [^nil].

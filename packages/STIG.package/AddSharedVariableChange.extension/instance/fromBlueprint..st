@@ -1,3 +1,4 @@
+initialize-release
 fromBlueprint: aSharedVariableBlueprint
 
 	isConstant := aSharedVariableBlueprint isConstant.

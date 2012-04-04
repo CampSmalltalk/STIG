@@ -1,3 +1,4 @@
+private-writing
 outputMultiByteUTF8: string to: fd
 
 	| buffer bufferIndex written |

@@ -1,1 +1,2 @@
+STIG
 stigUpdatePackage: aPackage

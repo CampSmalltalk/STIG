@@ -1,3 +1,4 @@
+loading
 readClass: aFilename using: fromDisk
 
 	| blueprint properties file superref reference |

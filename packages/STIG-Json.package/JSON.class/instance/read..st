@@ -1,3 +1,4 @@
+private
 read: count
 
 	^char

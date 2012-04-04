@@ -1,3 +1,4 @@
+private-parsing
 parseArray
 
 	| array |

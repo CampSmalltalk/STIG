@@ -1,3 +1,4 @@
+converting
 emitModificationFrom: aBlueprint changesTo: aCompositeChange
 	"Some subclasses get more specific than this."
 

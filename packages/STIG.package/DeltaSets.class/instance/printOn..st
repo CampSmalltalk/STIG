@@ -1,3 +1,4 @@
+printing
 printOn: aStream
 
 	aStream nextPutAll: 'ADDITIONS ('; print: additions size; nextPut: $).

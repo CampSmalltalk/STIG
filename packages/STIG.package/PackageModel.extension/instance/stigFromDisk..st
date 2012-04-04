@@ -1,3 +1,4 @@
+STIG
 stigFromDisk: aFromDisk
 
 	| deltas |

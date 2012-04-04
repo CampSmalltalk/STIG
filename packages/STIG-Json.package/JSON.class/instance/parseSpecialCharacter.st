@@ -1,3 +1,4 @@
+private-parsing
 parseSpecialCharacter
 
 	| c |

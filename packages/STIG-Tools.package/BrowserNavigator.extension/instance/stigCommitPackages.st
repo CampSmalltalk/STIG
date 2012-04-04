@@ -1,3 +1,4 @@
+STIG
 stigCommitPackages
 
 	| message |

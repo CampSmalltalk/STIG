@@ -1,3 +1,4 @@
+menus
 stigSubmenuItem
 	<itemInMenu: #(#pundleMenu) position: 15.0>
 

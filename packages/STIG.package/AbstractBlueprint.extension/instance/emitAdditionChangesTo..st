@@ -1,3 +1,4 @@
+converting
 emitAdditionChangesTo: aCompositeChange
 
 	^self subclassResponsibility

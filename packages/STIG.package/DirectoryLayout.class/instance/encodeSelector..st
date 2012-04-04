@@ -1,3 +1,4 @@
+private
 encodeSelector: aSymbol
 
 	^aSymbol last = $:

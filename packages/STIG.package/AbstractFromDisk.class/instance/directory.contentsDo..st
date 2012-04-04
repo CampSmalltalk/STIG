@@ -1,3 +1,4 @@
+accessing
 directory: tail contentsDo: aBlock
 
 	| dir |

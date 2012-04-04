@@ -1,3 +1,4 @@
+saving
 saveDeltas: deltas directory: fromDisk
 
 	deltas hasPackagePropertyChanges ifTrue: [ self savePackage: fromDisk ].

@@ -1,3 +1,4 @@
+loading
 readPackage: package
 
 	package directoryContentsDo: [:eachFile :eachTail |

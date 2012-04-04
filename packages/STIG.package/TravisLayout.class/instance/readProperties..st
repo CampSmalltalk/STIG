@@ -1,3 +1,4 @@
+loading
 readProperties: properties
 
 	properties directoryContentsDo: 

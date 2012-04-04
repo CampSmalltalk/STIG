@@ -1,13 +1,14 @@
+loading
 readMethod: aFilename tail: aTail instance: isInstance using: fromDisk
 
-	| blueprint properties |
-	properties := fromDisk fileContents: (aFilename directory / ((aTail allButLast: 2), 'json')).
-	properties := JSON read: properties readStream.
+	| blueprint selector source |
+	selector := aTail allButLast: 3.
+	source := (fromDisk fileContents: aFilename) readStream.
 	blueprint := MethodBlueprint of: aFilename.
 	blueprint isInstanceBehavior: isInstance.
 	blueprint classReference: fromDisk reference.
-	blueprint selector: (self decodeSelector: aTail) asSymbol.
-	blueprint category: (properties at: 'category').
-	blueprint source: (fromDisk fileContents: aFilename).
+	blueprint selector: (self decodeSelector: selector) asSymbol.
+	blueprint category: (source upTo: Character cr).
+	blueprint source: source upToEnd.
 	fromDisk addBlueprint: blueprint.
 	^fromDisk

@@ -1,3 +1,4 @@
+private-writing
 outputSingleByteUTF8: string to: fd
 
 	| bytes toWrite written |
