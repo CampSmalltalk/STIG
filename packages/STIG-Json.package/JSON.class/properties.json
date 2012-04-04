@@ -1,5 +1,4 @@
 {	"instvars" : [	"stream",
 		"char" ],
 	"name" : "JSON",
-	"super" : "Object",
-	"type" : "objects" }
+	"super" : "Object" }
