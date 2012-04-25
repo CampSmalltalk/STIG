@@ -3,8 +3,7 @@ readNamespace: aFilename using: fromDisk
 
 	| blueprint properties file reference |
 	properties := JSON read: (fromDisk fileContents: aFilename) readStream.
-	reference := ((properties at: 'namespace' ifAbsent: [nil]) ifNil: [''] ifNotNil: [ :ns | ns, '.' ]), (properties at: 'name').
-	reference := reference asQualifiedReference makeUnambiguous.
+	reference := self makeReference: properties.
 	fromDisk reference: reference.
 	blueprint := NamespaceBlueprint new.
 	blueprint original: aFilename.

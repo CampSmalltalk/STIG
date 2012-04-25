@@ -1,4 +1,4 @@
 {	"category" : "constants",
-	"initializer" : "'README'",
+	"initializer" : "'README.md'",
 	"name" : "CommentFile",
 	"namespace" : "STIG.CypressLayout" }

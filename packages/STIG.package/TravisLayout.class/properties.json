@@ -1,4 +1,4 @@
 {	"name" : "TravisLayout",
 	"namespace" : "STIG",
 	"super" : "DirectoryLayout",
-	"superNamespace:" : "STIG" }
+	"superNamespace" : "STIG" }

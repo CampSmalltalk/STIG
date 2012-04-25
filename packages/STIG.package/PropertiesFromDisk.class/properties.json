@@ -1,4 +1,4 @@
 {	"name" : "PropertiesFromDisk",
 	"namespace" : "STIG",
 	"super" : "AbstractFromDisk",
-	"superNamespace:" : "STIG" }
+	"superNamespace" : "STIG" }

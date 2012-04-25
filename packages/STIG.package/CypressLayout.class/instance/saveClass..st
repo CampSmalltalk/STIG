@@ -13,7 +13,7 @@ saveClass: blueprint
 	blueprint superclassReference ifNotNil: [
 		properties at: 'super' put: blueprint superclassReference name.
 		(IgnoredNamespaces includes: (ns := blueprint superclassReference environment)) ifFalse: [
-			properties at: 'superNamespace:' put: ns fullName ] ].
+			properties at: 'superNamespace' put: ns fullName ] ].
 	blueprint behaviorType == #none ifFalse: [ properties at: 'type' put: blueprint behaviorType ].
 	blueprint instanceVariables isEmpty ifFalse: [ properties at: 'instvars' put: blueprint instanceVariables ].
 	blueprint classInstanceVariables isEmpty ifFalse: [ properties at: 'classinstvars' put: blueprint classInstanceVariables ].

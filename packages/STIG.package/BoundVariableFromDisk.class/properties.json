@@ -3,4 +3,4 @@
 	"name" : "BoundVariableFromDisk",
 	"namespace" : "STIG",
 	"super" : "AbstractFromDisk",
-	"superNamespace:" : "STIG" }
+	"superNamespace" : "STIG" }

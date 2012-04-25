@@ -6,5 +6,5 @@ stigToDisk
 	fromDisk := layout packageFromDisk: self name.
 	fromDisk directory ensureDirectory.
 	fromDisk read: layout.
-	deltas := DeltaSets from: fromDisk to: self.
+	deltas := layout deltaSetsFrom: fromDisk to: self.
 	layout saveDeltas: deltas directory: fromDisk

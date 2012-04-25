@@ -4,4 +4,4 @@
 	"name" : "CypressLayout",
 	"namespace" : "STIG",
 	"super" : "DirectoryLayout",
-	"superNamespace:" : "STIG" }
+	"superNamespace" : "STIG" }
