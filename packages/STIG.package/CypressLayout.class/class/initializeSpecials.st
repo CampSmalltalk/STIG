@@ -7,7 +7,8 @@ initializeSpecials
 		at: $- put: 'minus';
 		at: $= put: 'equals';
 		at: $< put: 'less';
-		at: $> put: 'more';
+		at: $> put: 'more';	
+		at: $, put: 'comma';
 		at: $% put: 'percent';
 		at: $& put: 'and';
 		at: $| put: 'pipe';

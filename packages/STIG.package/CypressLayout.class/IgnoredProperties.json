@@ -1,5 +1,5 @@
 {	"category" : "constants",
 	"constant" : true,
-	"initializer" : "#(comment STIGRoot packageName parcelName developmentPrerequisites deploymentPrerequisites prerequisiteDescriptions ignoredPrerequisites)",
+	"initializer" : "#(comment STIGRoot packageName parcelName developmentPrerequisites deploymentPrerequisites prerequisiteDescriptions ignoredPrerequisites disregardedPrerequisites)",
 	"name" : "IgnoredProperties",
 	"namespace" : "STIG.CypressLayout" }

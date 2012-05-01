@@ -3,7 +3,7 @@ decodeSelector: aString
 
 	| specials ws rs |
 	aString last = $. ifTrue: [^aString replaceAll: $. with: $:; yourself].
-	aString first isAlphabetic ifTrue: [^aString].
+	(aString first isAlphabetic or: [ aString first = $_ ]) ifTrue: [^aString].
 	specials := self class specials.
 	ws := String new writeStream.
 	rs := aString readStream.

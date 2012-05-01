@@ -4,7 +4,7 @@ encodeSelector: aSymbol
 	^aSymbol last = $:
 		ifTrue: [aSymbol collect: [:each | each = $: ifTrue: [$.] ifFalse: [each]]]
 		ifFalse: 
-			[aSymbol first isAlphabetic
+			[(aSymbol first isAlphabetic or: [ aSymbol first = $_ ]) 
 				ifTrue: [aSymbol]
 				ifFalse: 
 					[| output specials |
