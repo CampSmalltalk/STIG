@@ -1,8 +1,13 @@
 instance creation
 root: dir
 
-	| type file |
-	type := (file := dir asFilename / 'properties.json') exists
-		ifTrue: [ self halt ]
-		ifFalse: [ DefaultLayout ].
-	^type new root: dir
+	| layout file |
+	layout := (file := dir asFilename / 'properties.json') exists
+		ifTrue: [ | properties formatName |
+			properties := JSON read: file contentsOfEntireFile readStream.
+			formatName := properties at: 'format'.
+			(self allSubclasses detect: [ :c | c name sameAs: formatName ]) new
+				format: properties;
+				yourself ]
+		ifFalse: [ DefaultLayout new ].
+	^layout root: dir

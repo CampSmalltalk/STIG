@@ -5,6 +5,6 @@ readPackage: package
 		eachFile isDirectory
 			ifTrue: [ (BoundVariableFromDisk parent: package directory: eachFile name: eachTail) read: self ]
 			ifFalse: [
-				eachTail = CommentFile ifTrue: [ self readComment: eachFile using: package ].
-				eachTail = PropertyFile ifTrue: [ self readProperties: eachFile using: package ] ] ].
+				eachTail = self commentFile ifTrue: [ self readComment: eachFile using: package ].
+				eachTail = self propertyFile ifTrue: [ self readProperties: eachFile using: package ] ] ].
 	^package

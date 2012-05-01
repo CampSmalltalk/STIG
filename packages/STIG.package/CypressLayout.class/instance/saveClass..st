@@ -5,7 +5,7 @@ saveClass: blueprint
 	name := blueprint reference name.
 	path := (Array with: blueprint packageName, '.package' with: name, '.class').
 	blueprint comment size = 0 ifFalse: [
-		self path: path tail: CommentFile write: [ :ws | ws nextPutAll: blueprint comment] ].
+		self path: path tail: self commentFile write: [ :ws | ws nextPutAll: blueprint comment] ].
 	properties := Dictionary new.
 	properties at: 'name' put: name.
 	(IgnoredNamespaces includes: (ns := blueprint reference environment)) ifFalse: [
@@ -20,4 +20,4 @@ saveClass: blueprint
 	blueprint importsString isEmpty ifFalse: [ properties at: 'imports' put: (self encodeImportsString: blueprint) ].
 	blueprint isPrivate ifTrue: [ properties at: 'private' put: blueprint isPrivate ].
 	blueprint attributes isEmpty ifFalse: [ properties at: 'attributes' put: blueprint attributes ].
-	self path: path tail: PropertyFile write: [ :ws | properties jsonWriteOn: ws ]
+	self path: path tail: self propertyFile write: [ :ws | properties jsonWriteOn: ws ]

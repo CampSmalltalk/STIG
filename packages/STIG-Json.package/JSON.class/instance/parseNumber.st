@@ -1,7 +1,8 @@
 private-parsing
 parseNumber
 	
-	| number |
+	| number digit |
 	number := String new writeStream.
-	[ (char := self get) isDigit ] whileTrue: [ number nextPut: char ].
+	[ (digit := self get) isDigit ] whileTrue: [ number nextPut: digit ].
+	char := digit.
 	^Number readFrom: number contents readStream

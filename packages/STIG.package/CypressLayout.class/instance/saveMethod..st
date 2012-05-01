@@ -11,7 +11,7 @@ saveMethod: blueprint
 				properties := Dictionary new at: 'name' put: reference name; yourself.
 				(IgnoredNamespaces includes: reference environment) ifFalse: [
 					properties at: 'namespace' put: reference environment fullName ].
-				self path: dir tail: PropertyFile write: [ :ws | properties jsonWriteOn: ws ].
+				self path: dir tail: self propertyFile write: [ :ws | properties jsonWriteOn: ws ].
 				dir ] ].
 	path := classDirectory copyWith: (blueprint isInstanceBehavior ifTrue: ['instance'] ifFalse: ['class']).
 	tail := self encodeSelector: blueprint selector.

@@ -2,8 +2,8 @@ loading
 readBoundVariable: variable
 
 	variable directoryContentsDo: [:eachFile :eachTail |
-		(eachFile isDirectory or: [ eachTail = CommentFile ]) ifFalse: [
-			eachTail = PropertyFile
+		(eachFile isDirectory or: [ eachTail = self commentFile ]) ifFalse: [
+			eachTail = self propertyFile
 				ifTrue: [ (variable name endsWith: '.pool')
 						ifTrue: [self readNamespace: eachFile using: variable]
 						ifFalse: [self readClass: eachFile using: variable ] ]

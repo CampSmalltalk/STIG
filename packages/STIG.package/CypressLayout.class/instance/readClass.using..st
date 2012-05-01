@@ -15,9 +15,9 @@ readClass: aFilename using: fromDisk
 	blueprint classInstanceVariables: (properties at: 'classinstvars' ifAbsent: [Array new]).
 	blueprint attributes: (properties at: 'attributes' ifAbsent: [ Array new ]).
 	blueprint behaviorType: (properties at: 'type' ifAbsent: [ #none ]).
-	blueprint comment: ((file := aFilename directory / CommentFile) exists ifTrue: [fromDisk fileContents: file] ifFalse: ['']).
+	blueprint comment: ((file := aFilename directory / self commentFile) exists ifTrue: [fromDisk fileContents: file] ifFalse: ['']).
 	superref := ((properties at: 'superNamespace' ifAbsent: [nil]) ifNil: [''] ifNotNil: [ :ns | ns, '.' ]), (properties at: 'super').
 	blueprint superclassReference: (Compiler evaluate: superref) fullName asQualifiedReference makeUnambiguous.
-	blueprint comment: ((file := aFilename directory / CommentFile) exists ifTrue: [fromDisk fileContents: file] ifFalse: ['']).
+	blueprint comment: ((file := aFilename directory / self commentFile) exists ifTrue: [fromDisk fileContents: file] ifFalse: ['']).
 	fromDisk addBlueprint: blueprint.
 	^fromDisk

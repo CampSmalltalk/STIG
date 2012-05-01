@@ -10,6 +10,6 @@ readNamespace: aFilename using: fromDisk
 	blueprint reference: reference.
 	blueprint importsString: (self decodeImportsString: (properties at: 'imports' ifAbsent: [''])).
 	blueprint isPrivate: (properties at: 'private' ifAbsent: [ false ]).
-	blueprint comment: ((file := aFilename directory / CommentFile) exists ifTrue: [fromDisk fileContents: file] ifFalse: ['']).
+	blueprint comment: ((file := aFilename directory / self commentFile) exists ifTrue: [fromDisk fileContents: file] ifFalse: ['']).
 	fromDisk addBlueprint: blueprint.
 	^fromDisk
