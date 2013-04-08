@@ -1,4 +1,5 @@
-{	"instvars" : [	"packageName",
+{	"_cypress_copyright" : "Copyright 2012 Travis Griggs, Martin Kobetic",
+	"instvars" : [	"packageName",
 		"propertyBlueprints",
 		"namespaceBlueprints",
 		"classBlueprints",

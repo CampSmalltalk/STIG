@@ -1,4 +1,5 @@
-{	"instvars" : [	"package",
+{	"_cypress_copyright" : "Copyright 2012 Travis Griggs, Martin Kobetic",
+	"instvars" : [	"package",
 		"root",
 		"directoryCache" ],
 	"name" : "DirectoryLayout",

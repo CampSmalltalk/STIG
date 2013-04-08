@@ -2,12 +2,12 @@
 notice: Copyright 2012 Travis Griggs, Martin Kobetic
 category: loading
 "
-readPackage: package
+readPackage: aPackage
 
-	package directoryContentsDo: [:eachFile :eachTail |
+	aPackage directoryContentsDo: [:eachFile :eachTail |
 		eachFile isDirectory
-			ifTrue: [ (BoundVariableFromDisk parent: package directory: eachFile name: eachTail) read: self ]
+			ifTrue: [ (BoundVariableFromDisk parent: aPackage directory: eachFile name: eachTail) read: self ]
 			ifFalse: [
-				eachTail = self commentFile ifTrue: [ self readComment: eachFile using: package ].
-				eachTail = self propertyFile ifTrue: [ self readProperties: eachFile using: package ] ] ].
-	^package
+				eachTail = self commentFile ifTrue: [ self readComment: eachFile using: aPackage ].
+				eachTail = self propertyFile ifTrue: [ self readProperties: eachFile using: aPackage ] ] ].
+	^aPackage

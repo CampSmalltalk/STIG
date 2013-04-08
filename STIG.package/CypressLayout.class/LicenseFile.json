@@ -1,4 +1,4 @@
 {	"category" : "constants",
-	"initializer" : "'README'",
-	"name" : "CommentFile",
+	"initializer" : "'LICENSE'",
+	"name" : "LicenseFile",
 	"namespace" : "STIG.CypressLayout" }

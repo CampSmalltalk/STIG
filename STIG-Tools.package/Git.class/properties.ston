@@ -1,4 +1,7 @@
-{	"instvars" : [	"globalArgs" ],
+{	"_cypress_copyright" : "Copyright 2012 Travis Griggs, Martin Kobetic",
+	"classvars" : [	"LogOutput",
+		"LogTimes" ],
+	"instvars" : [	"globalArgs" ],
 	"name" : "Git",
 	"namespace" : "STIG",
 	"super" : "Object" }

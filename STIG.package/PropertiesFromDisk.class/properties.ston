@@ -1,4 +1,5 @@
-{	"name" : "PropertiesFromDisk",
+{	"_cypress_copyright" : "Copyright 2012 Travis Griggs, Martin Kobetic",
+	"name" : "PropertiesFromDisk",
 	"namespace" : "STIG",
 	"super" : "AbstractFromDisk",
 	"superNamespace" : "STIG" }

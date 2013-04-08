@@ -1,4 +1,6 @@
-{	"instvars" : [	"stream",
+{	"_cypress_copyright" : "Copyright 2012 Travis Griggs, Martin Kobetic",
+	"classvars" : [	"Whitespace" ],
+	"instvars" : [	"stream",
 		"char" ],
 	"name" : "JSON",
 	"super" : "Object" }

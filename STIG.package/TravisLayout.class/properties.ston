@@ -1,4 +1,5 @@
-{	"name" : "TravisLayout",
+{	"_cypress_copyright" : "Copyright 2012 Travis Griggs, Martin Kobetic",
+	"name" : "TravisLayout",
 	"namespace" : "STIG",
 	"super" : "DirectoryLayout",
 	"superNamespace" : "STIG" }

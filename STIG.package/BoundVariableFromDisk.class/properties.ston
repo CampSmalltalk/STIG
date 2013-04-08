@@ -1,4 +1,5 @@
-{	"instvars" : [	"name",
+{	"_cypress_copyright" : "Copyright 2012 Travis Griggs, Martin Kobetic",
+	"instvars" : [	"name",
 		"reference" ],
 	"name" : "BoundVariableFromDisk",
 	"namespace" : "STIG",

@@ -1,4 +1,5 @@
-{	"instvars" : [	"directory",
+{	"_cypress_copyright" : "Copyright 2012 Travis Griggs, Martin Kobetic",
+	"instvars" : [	"directory",
 		"parent" ],
 	"name" : "AbstractFromDisk",
 	"namespace" : "STIG",
