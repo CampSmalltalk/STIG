@@ -1,4 +1,8 @@
 {	"classinstvars" : [	"specials" ],
+	"classvars" : [	"CommentFile",
+		"IgnoredNamespaces",
+		"IgnoredProperties",
+		"PropertyFile" ],
 	"instvars" : [	"classPaths",
 		"definedClasses",
 		"commentFile",
