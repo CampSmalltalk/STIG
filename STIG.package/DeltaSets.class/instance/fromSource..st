@@ -1,4 +1,7 @@
-initialize-release
+"
+notice: Copyright 2012 Travis Griggs, Martin Kobetic
+category: initialize-release
+"
 fromSource: aBlueprintProvider
 
 	self fromProperties: aBlueprintProvider propertyBlueprints.

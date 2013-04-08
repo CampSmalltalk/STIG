@@ -1,4 +1,7 @@
-private
+"
+notice: Copyright 2012 Travis Griggs, Martin Kobetic
+category: private
+"
 fileContents: aFile
 
 	| bytes fd size buffer output totalRead |

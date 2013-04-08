@@ -1,4 +1,7 @@
-loading
+"
+notice: Copyright 2012 Travis Griggs, Martin Kobetic
+category: loading
+"
 readNamespace: aFilename using: fromDisk
 
 	| blueprint properties file reference |

@@ -1,4 +1,7 @@
-utility
+"
+notice: Copyright 2012 Travis Griggs, Martin Kobetic
+category: utility
+"
 sortForDoingImageUpdates: aCollection
 
 	| result byNeed notYetAdded canBeAdded groupToAdd |

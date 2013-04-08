@@ -1,4 +1,7 @@
-converting
+"
+notice: Copyright 2012 Travis Griggs, Martin Kobetic
+category: converting
+"
 emitModificationFrom: anOriginalBlueprint changesTo: aCompositeChange
 
 	(anOriginalBlueprint hasSameDefinition: self)

@@ -1,4 +1,7 @@
-menus
+"
+notice: Copyright 2012 Travis Griggs, Martin Kobetic
+category: menus
+"
 stigSubmenuItem
 	<itemInMenu: #(#pundleMenu) position: 15.0>
 

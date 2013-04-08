@@ -1,4 +1,7 @@
-composing
+"
+notice: Copyright 2012 Travis Griggs, Martin Kobetic
+category: composing
+"
 emitUTF8Into: aByteArray startingAt: anIndex
 
 	| code |

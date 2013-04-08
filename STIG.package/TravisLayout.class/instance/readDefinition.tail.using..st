@@ -1,4 +1,7 @@
-loading
+"
+notice: Copyright 2012 Travis Griggs, Martin Kobetic
+category: loading
+"
 readDefinition: aFilename tail: aTail using: fromDisk
 
 	'0.class' = aTail

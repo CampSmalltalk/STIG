@@ -1,4 +1,7 @@
-commands
+"
+notice: Copyright 2012 Travis Griggs, Martin Kobetic
+category: commands
+"
 commitAll: aMessage
 
 	self

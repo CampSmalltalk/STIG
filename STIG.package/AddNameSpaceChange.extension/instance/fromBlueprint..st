@@ -1,4 +1,7 @@
-initialize-release
+"
+notice: Copyright 2012 Travis Griggs, Martin Kobetic
+category: initialize-release
+"
 fromBlueprint: aNamespaceBlueprint
 
 	imports := self parseImports: aNamespaceBlueprint importsString.

@@ -1,4 +1,7 @@
-menus
+"
+notice: Copyright 2012 Travis Griggs, Martin Kobetic
+category: menus
+"
 stigSetRootMenuItem
 	<itemInMenu: #(#pundleMenu #stigMenu) position: 90.5>
 

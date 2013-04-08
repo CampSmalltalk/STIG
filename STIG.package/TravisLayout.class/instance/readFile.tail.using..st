@@ -1,4 +1,7 @@
-loading
+"
+notice: Copyright 2012 Travis Griggs, Martin Kobetic
+category: loading
+"
 readFile: aFilename tail: aTail using: fromDisk
 
 	^aTail first = $0

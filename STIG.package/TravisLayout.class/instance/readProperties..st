@@ -1,4 +1,7 @@
-loading
+"
+notice: Copyright 2012 Travis Griggs, Martin Kobetic
+category: loading
+"
 readProperties: properties
 
 	properties directoryContentsDo: 

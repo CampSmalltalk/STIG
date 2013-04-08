@@ -1,4 +1,7 @@
-loading
+"
+notice: Copyright 2012 Travis Griggs, Martin Kobetic
+category: loading
+"
 readSharedVariable: aFilename using: fromDisk
 
 	| rs lookup dispatch blueprint |

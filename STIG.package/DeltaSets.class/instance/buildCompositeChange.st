@@ -1,4 +1,7 @@
-API
+"
+notice: Copyright 2012 Travis Griggs, Martin Kobetic
+category: API
+"
 buildCompositeChange
 
 	| composite |

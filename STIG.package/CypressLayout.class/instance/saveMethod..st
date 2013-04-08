@@ -1,4 +1,7 @@
-saving
+"
+notice: Copyright 2012 Travis Griggs, Martin Kobetic
+category: saving
+"
 saveMethod: blueprint
 
 	| path tail reference classDirectory properties |
@@ -16,5 +19,8 @@ saveMethod: blueprint
 	path := classDirectory copyWith: (blueprint isInstanceBehavior ifTrue: ['instance'] ifFalse: ['class']).
 	tail := self encodeSelector: blueprint selector.
 	self path: path tail: tail, '.st' write: [:ws |
-		ws	nextPutAll: blueprint category; cr;
+		ws	nextPut: $"; cr;
+			nextPutAll: 'notice: '; nextPutAll: package stigCopyright; cr;
+			nextPutAll: 'category: '; nextPutAll: blueprint category; cr;
+			nextPut: $"; cr;
 			nextPutAll: blueprint source]
