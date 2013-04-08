@@ -9,5 +9,6 @@ readPackage: aPackage
 			ifTrue: [ (BoundVariableFromDisk parent: aPackage directory: eachFile name: eachTail) read: self ]
 			ifFalse: [
 				eachTail = self commentFile ifTrue: [ self readComment: eachFile using: aPackage ].
+				eachTail = self licenseFile ifTrue: [ self readLicense: eachFile using: aPackage ].
 				eachTail = self propertyFile ifTrue: [ self readProperties: eachFile using: aPackage ] ] ].
 	^aPackage

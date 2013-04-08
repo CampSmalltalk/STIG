@@ -2,9 +2,9 @@
 notice: Copyright 2012 Travis Griggs, Martin Kobetic
 category: loading
 "
-readPackage: package
+readPackage: aPackage
 
-	package directoryContentsDo: 
+	aPackage directoryContentsDo: 
 			[:eachFile :eachTail |
 			'.git' = eachTail
 				ifFalse: 
@@ -14,5 +14,5 @@ readPackage: package
 							type := '_.Properties' = eachTail
 										ifTrue: [PropertiesFromDisk]
 										ifFalse: [BoundVariableFromDisk].
-							(type parent: package directory: eachFile name: eachTail) read: self ]]].
-	^package
+							(type parent: aPackage directory: eachFile name: eachTail) read: self ]]].
+	^aPackage
