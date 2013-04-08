@@ -15,12 +15,12 @@ saveClass: blueprint
 		properties at: 'super' put: blueprint superclassReference name.
 		(IgnoredNamespaces includes: (ns := blueprint superclassReference environment)) ifFalse: [
 			properties at: 'superNamespace' put: ns fullName ] ].
-	blueprint behaviorType == #none ifFalse: [ properties at: 'type' put: blueprint behaviorType ].
+	blueprint behaviorType == #none ifFalse: [ properties at: '_vw_type' put: blueprint behaviorType ].
 	blueprint instanceVariables isEmpty ifFalse: [ properties at: 'instvars' put: blueprint instanceVariables ].
 	blueprint classInstanceVariables isEmpty ifFalse: [ properties at: 'classinstvars' put: blueprint classInstanceVariables ].
 	class classVariablesString isEmpty ifFalse: [
 		properties at: 'classvars' put: (class classVariablesString trimBlanks tokensBasedOn: $ ) asArray ].
-	blueprint importsString isEmpty ifFalse: [ properties at: 'imports' put: (self encodeImportsString: blueprint) ].
-	blueprint isPrivate ifTrue: [ properties at: 'private' put: blueprint isPrivate ].
-	blueprint attributes isEmpty ifFalse: [ properties at: 'attributes' put: blueprint attributes ].
+	blueprint importsString isEmpty ifFalse: [ properties at: '_vw_imports' put: (self encodeImportsString: blueprint) ].
+	blueprint isPrivate ifTrue: [ properties at: '_vw_private' put: blueprint isPrivate ].
+	blueprint attributes isEmpty ifFalse: [ properties at: '_vw_attributes' put: blueprint attributes ].
 	self path: path tail: self propertyFile write: [ :ws | properties jsonWriteOn: ws ]
