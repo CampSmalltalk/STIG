@@ -26,5 +26,5 @@ saveClass: blueprint
 	blueprint importsString isEmpty ifFalse: [ properties at: '_vw_imports' put: (self encodeImportsString: blueprint) ].
 	blueprint isPrivate ifTrue: [ properties at: '_vw_private' put: blueprint isPrivate ].
 	blueprint attributes isEmpty ifFalse: [ properties at: '_vw_attributes' put: blueprint attributes ].
-	package stigCopyright isEmpty ifFalse: [ properties at: '_cypress_copyright' put: package stigCopyright ].
+	copyrightLine ifNotNil: [ properties at: '_cypress_copyright' put: copyrightLine ].
 	self path: path tail: self propertyFile write: [ :ws | properties jsonWriteOn: ws ]

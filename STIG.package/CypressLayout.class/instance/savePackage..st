@@ -14,5 +14,5 @@ savePackage: aPackage
 	ignore := IgnoredProperties, #(comment notice).
 	blueprints := aPackage imagePackage propertyBlueprints reject: [ :bp | ignore includes: bp key ].
 	blueprints := blueprints inject: Dictionary new into: [ :d :bp | d at: bp key put: bp value; yourself ].
-	package stigCopyright isEmpty ifFalse: [ blueprints at: '_cypress_copyright' put: package stigCopyright ].
+	copyrightLine ifNotNil: [ blueprints at: '_cypress_copyright' put: copyrightLine ].
 	self path: path tail: self propertyFile write: [ :ws | blueprints jsonWriteOn: ws ]

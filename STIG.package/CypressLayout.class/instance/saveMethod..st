@@ -20,7 +20,7 @@ saveMethod: blueprint
 	tail := self encodeSelector: blueprint selector.
 	self path: path tail: tail, '.st' write: [:ws |
 		ws	nextPut: $"; cr;
-			nextPutAll: 'notice: '; nextPutAll: package stigCopyright; cr;
+			nextPutAll: 'notice: '; nextPutAll: (copyrightLine ifNil: ['']); cr;
 			nextPutAll: 'category: '; nextPutAll: blueprint category; cr;
 			nextPut: $"; cr;
 			nextPutAll: blueprint source]

@@ -4,7 +4,9 @@ category: instance creation
 "
 for: package
 
-	^DefaultLayout new
+	| layout |
+	layout := DefaultLayout.
+	(package stigRoot asFilename / 'properties.ston') exists ifTrue: [ layout := CypressLayout ].
+	^layout new
 		package: package;
-		root: package stigRoot;
 		yourself
