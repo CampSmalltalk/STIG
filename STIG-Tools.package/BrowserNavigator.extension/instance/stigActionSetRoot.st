@@ -9,7 +9,7 @@ stigActionSetRoot
 		^ nil 
 	].
 		
-	d := self packages first propertyAt: #STIGRoot ifAbsent: STIG.DefaultRoot.
+	d := self packages first propertyAt: #STIGRoot ifAbsent: [ STIG.DefaultRoot ].
 	
 	dialog := ChooseDirectoryDialog new.
 	dialog windowTitle: 'Root directory for these projects?';

@@ -1,6 +1,6 @@
 "
 notice: 
-category: menus
+category: STIG
 "
 stigLoadMenuItem
 	<itemInMenu: #(#pundleMenu #stigMenu) position: 90.5>
