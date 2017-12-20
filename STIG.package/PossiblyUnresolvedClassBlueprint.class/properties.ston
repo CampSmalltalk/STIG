@@ -1,0 +1,5 @@
+{	"instvars" : [	"superclassName" ],
+	"name" : "PossiblyUnresolvedClassBlueprint",
+	"namespace" : "STIG",
+	"super" : "ClassBlueprint",
+	"superNamespace" : "Tools" }
