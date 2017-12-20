@@ -1,0 +1,1 @@
+I exist because ClassBlueprint needs an actual reference to a superclass. When the superclass is in the package that's currently being loaded, it cannot be resolved because it possibly does not exist in the image yet.
